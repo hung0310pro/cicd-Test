@@ -1,0 +1,32 @@
+name: PHP Code Style Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install PHP and Composer
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+        tools: composer
+
+    - name: Install PHPCS
+      run: composer global require "squizlabs/php_codesniffer=*"
+
+    - name: Add PHPCS to PATH
+      run: echo "::add-path::${HOME}/.composer/vendor/bin"
+
+    - name: Run PHPCS on abc.php
+      run: phpcs --standard=PSR12 abc.php
