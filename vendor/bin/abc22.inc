@@ -1,0 +1,5 @@
+<?php
+$c = 'dsakjdsajkdhskjahdjksahdjksahdk
+sjahdjksahdsacxznbcxmnzbcxnzmbcxzbcmnxzbkahdiioqwue
+wioqueiowqueiowqueiowqueiowquiwoqueiw
+oquiwoqeuiwqe';
