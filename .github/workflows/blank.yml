@@ -27,3 +27,10 @@ jobs:
 
     - name: Run PHPCS on abc.php
       run: phpcs --standard=PSR12 abc.php
+
+    - name: Deploy to AWS
+      run: |
+      
+    # Thực hiện các bước triển khai lên AWS tại đây, ví dụ:
+    # aws s3 sync ./your-directory s3://your-bucket
+    # aws cloudfront create-invalidation --distribution-id your-distribution-id --paths "/*"
